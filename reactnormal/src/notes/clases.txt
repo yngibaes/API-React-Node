@@ -1,0 +1,28 @@
+Primera clase:
+
+/* const name = 'Ana'; */
+  const user ={
+    name: 'Ana',
+    surname: 'Amaya',
+    age: 18
+  }
+  const element = <h1>Hola, {user.name}</h1>;
+  return (
+    element
+  );
+
+--------------------------------
+
+Segunda clase:
+
+
+
+Esto es de funcional
+
+const ThemeBackground = createContext(null); //Se crea un contexto.
+const theme = useContext(ThemeBackground)
+        const className = 'panel ' + theme //Se crea una clase.
+
+        <ThemeBackground.Provider value='dark'> {/*Se le da un valor al contexto.*/}
+                <Card name={this.props.name} img={this.props.img}/> {/*Se llama al componente Card.*/}
+            </ThemeBackground.Provider>

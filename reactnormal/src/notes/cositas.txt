@@ -1,0 +1,14 @@
+Contexto
+    El contexto nos permite definir varios valores predeterminados, por ejemplo el fondo, puede ser inicalmente claro, y después ser oscuro con un cambio. Pero inicialmente en el código es claro.
+
+    Permite pasar información en profundidad sin pasar accesorio explicitamente.
+
+
+    SomeContext.Provider: Permite proporcionar el valor de contexto a los componentes.
+
+    En este se define el valor del contexto para todos los componentes internos de este. El accesorio value el valor puede ser de cualquier tipo.
+
+
+    SomeContext.Consumer: Es una forma alternativ ay rara vez utilizada de leer el valor del contexto. Esta opción es antigua, de igual manera, sigue funcionando, pero en el nuevo código ya debería ser leído el contexto con "useContext();"
+
+
