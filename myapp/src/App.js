@@ -1,19 +1,23 @@
 import React from 'react';
+import Gatos from './pages/gatos';
+import Inicio from './pages/inicio';
+import PageForm from './pages/pageForm';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-/*Componentes*/
-import Clase from './components/comClase'; //Importar el componente Clase.
-import img from './components/img/hector.jpg' //Importar la imagen.
 
-
-
-function App() {
-  return(
-    <>
-        <Clase name='Anita' img={img}/>
-        <Clase name='Anthony' img="https://uvn-brightspot.s3.amazonaws.com/assets/vixes/btg/curiosidades.batanga.com/files/8-sorprendentes-cosas-que-no-sabias-sobre-los-gatos-6.jpg"/>
-        <Clase name='Santiago' img="https://i.ytimg.com/vi/bg9944Rl0Ak/maxresdefault.jpg"/>
-    </>
+const App=()=>{
+  return (
+    <div>
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Inicio/>}/>
+            <Route exact path="/gatos" element={<Gatos/>}/>
+            <Route exact path="/form" element={<PageForm/>}/>
+          </Routes>
+        </BrowserRouter>
+    </div>
   )
-}
+} 
+export default App 
 
-export default App;
+/* export default function App() {} */
