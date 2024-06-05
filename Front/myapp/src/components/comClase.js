@@ -14,7 +14,7 @@ class Card extends Component{ //Crear una clase.
                   <div className="p-4 w-96 justify-center flex items-center flex-col">
                     <h1 className='text-2xl font-bold'>Hola, {this.props.name}</h1> {/* This.props es un accesorio. */}
                     <p className='text-sm text-red-200'>{this.props.descri}</p>
-                    <img src={this.props.img} alt={this.props.name} className='w-60 rounded h-auto'/>
+                    <img src={this.props.img} alt={this.props.img} className='w-60 rounded h-auto'/>
                   </div>
               </div>
             </div>
