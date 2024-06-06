@@ -39,4 +39,24 @@ export default class infoController{
             }
         }
     }
+
+    static async details(req,res){
+        let connection;
+        try{
+            const id = req.params.id;
+            connection = await mysql.createConnection(db)
+            console.log(id)
+            const [result] = await connection.execute("SELECT * FROM card WHERE id = ?", [id])
+            console.log(result)
+            res.json(result)
+        }
+        catch(error){
+            res.status(500).json({'error': error.message})
+        }
+        finally{
+            if(connection){
+                await connection.end()
+            }
+        }
+    }
 }

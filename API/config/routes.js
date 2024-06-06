@@ -10,6 +10,6 @@ router.get('/info', infoController.index)
 router.post('/info', infoController.store)
 
 //specific info for id
-//router.get('/info/:id', infoController.details) 
+router.get('/info/:id', infoController.details) 
 
 export default router
