@@ -10,7 +10,7 @@ class Card extends Component{ //Crear una clase.
         const className = theme === 'dark' ? 'bg-gray-500 text-white' : 'bg-white' // Usar clases de Tailwind.
         return(
             <div className='flex justify-center items-center m-10 flex-wrap'>
-              <div className={`${className} + w-full h-72 flex justify-center items-center flex-col rounded-lg`}>
+              <div className={`${className} + w-full h-full flex justify-center items-center flex-col rounded-lg p-5`}>
                   <div className="p-4 w-96 justify-center flex items-center flex-col">
                     <h1 className='text-2xl font-bold'>Hola, {this.props.name}</h1> {/* This.props es un accesorio. */}
                     <p className='text-sm text-red-200'>{this.props.descri}</p>

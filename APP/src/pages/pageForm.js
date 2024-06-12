@@ -17,8 +17,28 @@ export default class PageForm extends React.Component{
             datos[e.target.name]=e.target.value
             this.setState(datos) */
         this.setState({ 
-            form: {[e.target.name]: e.target.value }
+            form: {...this.state.form,
+                [e.target.name]: e.target.value }
         });
+      };
+    handleSubmit = async (e) => {
+        e.preventDefault()
+        try{
+            let response = {
+                method: 'POST',
+                body: JSON.stringify(this.state.form),
+                headers: {
+                    'Aceppt': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            }
+            let res = await fetch('http://localhost:8000/api/info', response);
+            let data = await res.json();
+            console.log(data);
+        }
+        catch(error){
+            console.log(error)
+        }
       };
     render(){
     return(
@@ -28,6 +48,7 @@ export default class PageForm extends React.Component{
             </div>
             <div className="col-sm">
                     <Form
+                    onSubmit={this.handleSubmit}
                     handleChange={this.handleChange}
                     form={this.state.form}/>
             </div>

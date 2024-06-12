@@ -1,15 +1,12 @@
 import React from "react";
 
 export default class Form extends React.Component {
-  handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(this.state)
-  };
+
   render() {
-    const {handleChange, form} = this.props
+    const {handleChange, form, onSubmit} = this.props
     return (
       <div className="flex justify-center items-center mt-5">
-        <form className="w-1/4" onSubmit={this.handleSubmit}>
+        <form className="w-1/4" onSubmit={onSubmit} method="POST">
           <div className="my-5">
             <h1 className="text-center text-lg font-bold text-red-800">
               Formulario
@@ -53,13 +50,10 @@ export default class Form extends React.Component {
               Imagen
             </label>
             <input
-              type="file"
-              placeholder="Envíe una imagen"
+              type="text"
+              placeholder="Digite una descripción"
               name="img"
-              className="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none
-                    file:bg-gray-50 file:border-0
-                    file:me-4
-                    file:py-3 file:px-4"
+              className="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
               onChange={handleChange}
               value={form.img}
             />
