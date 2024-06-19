@@ -1,9 +1,8 @@
 import React from 'react';
 import Gatos from './pages/gatos';
 import Inicio from './pages/inicio';
-import PageForm from './pages/pageForm';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-
+import Navigate from './pages/navigate';
 
 const App=()=>{
   return (
@@ -12,7 +11,7 @@ const App=()=>{
           <Routes>
             <Route exact path="/" element={<Inicio/>}/>
             <Route exact path="/gatos" element={<Gatos/>}/>
-            <Route exact path="/form" element={<PageForm/>}/>
+            <Route exact path="/gatos/form" element={<Navigate/>}/>
           </Routes>
         </BrowserRouter>
     </div>

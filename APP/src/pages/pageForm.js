@@ -1,5 +1,5 @@
 import React from "react";
-import Form from '../components/form'
+import Form from '../components/form.js'
 import Clase from "../components/comClase";
 
 export default class PageForm extends React.Component{
@@ -23,6 +23,7 @@ export default class PageForm extends React.Component{
       };
     handleSubmit = async (e) => {
         e.preventDefault()
+        this.props.navigates('/gatos')
         try{
             let response = {
                 method: 'POST',
