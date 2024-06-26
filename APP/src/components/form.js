@@ -1,9 +1,8 @@
 import React from "react";
 
 export default class Form extends React.Component {
-
   render() {
-    const {handleChange, form, onSubmit} = this.props
+    const { handleChange, form = {}, onSubmit } = this.props;
     return (
       <div className="flex justify-center items-center mt-5">
         <form className="w-1/4" onSubmit={onSubmit} method="POST">

@@ -1,6 +1,5 @@
 import React from "react";
-import Form from '../components/form.js'
-import Clase from "../components/comClase";
+import TarjeForm from "../components/TarjeForm.js";
 
 export default class PageForm extends React.Component{
     state={
@@ -23,7 +22,7 @@ export default class PageForm extends React.Component{
       };
     handleSubmit = async (e) => {
         e.preventDefault()
-        this.props.navigates('/gatos')
+        this.props.navigate('/gatos')
         try{
             let response = {
                 method: 'POST',
@@ -42,18 +41,9 @@ export default class PageForm extends React.Component{
         }
       };
     render(){
-    return(
-        <div className="row-auto">
-            <div className="col-sm">
-                <Clase {...this.state.form}/>
-            </div>
-            <div className="col-sm">
-                    <Form
-                    onSubmit={this.handleSubmit}
-                    handleChange={this.handleChange}
-                    form={this.state.form}/>
-            </div>
-        </div>
-    )
+        return  <TarjeForm
+                onSubmit={this.handleSubmit}
+                handleChange={this.handleChange}
+                form={this.state.form}/>
     }
 }
