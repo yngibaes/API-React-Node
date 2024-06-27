@@ -1,9 +1,9 @@
 const db = {
-    host:'localhost',
-    port: 3306,
+    host:'monorail.proxy.rlwy.net',
+    port: 41833,
     user:'root',
-    password: '',
-    database: 'api-react/node'
+    password: 'IwNjRMYRaMwAwGZiWWOnidVzHYSPjKvf',
+    database: 'railway'
 }
 
 export default db
