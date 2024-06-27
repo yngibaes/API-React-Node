@@ -11,7 +11,7 @@ class Card extends Component {
     const theme = this.context; //Acceder al contexto.
     const className =
       theme === "dark"
-        ? "flex flex-col flex-wrap bg-gray-500 text-white h-full"
+        ? "flex flex-col flex-wrap bg-gray-500 text-white h-full rounded"
         : "flex flex-col flex-wrap bg-white text-black h-full"; // Usar clases de Tailwind.
     return (
       <div className="flex justify-center items-center m-2">
@@ -33,7 +33,7 @@ class Card extends Component {
     );
   }
 }
-
+/* 
 // Crear un componente proveedor de tema
 class Clase extends Component {
   render() {
@@ -49,4 +49,14 @@ class Clase extends Component {
     );
   }
 }
-export default Clase;
+export default Clase; */
+
+const Tarjeta = (props) => {
+  return (
+    <ThemeContext.Provider value="dark">
+      <Card name={props.name} img={props.img} descri={props.descri} />
+    </ThemeContext.Provider>
+  );
+}
+
+export default Tarjeta
