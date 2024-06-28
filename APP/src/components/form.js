@@ -7,12 +7,12 @@ export default class Form extends React.Component {
       <div className="flex justify-center items-center mt-5">
         <form className="w-1/4" onSubmit={onSubmit} method="POST">
           <div className="my-5">
-            <h1 className="text-center text-lg font-bold text-red-800">
+            <h1 className="text-center text-lg font-bold text-violet-800">
               Formulario
             </h1>
             <label
               htmlFor="name"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-violet-900"
             >
               Nombre
             </label>
@@ -28,7 +28,7 @@ export default class Form extends React.Component {
           <div className="my-5">
             <label
               htmlFor="descri"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-violet-900"
             >
               Descripción
             </label>
@@ -44,7 +44,7 @@ export default class Form extends React.Component {
           <div className="my-5">
             <label
               htmlFor="img"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-violet-900"
             >
               Imagen
             </label>
@@ -59,7 +59,7 @@ export default class Form extends React.Component {
           </div>
           <div className="flex justify-center items-center">
             <button
-              className="bg-red-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-violet-800 hover:bg-violet-600 text-white font-bold py-2 px-4 rounded"
               type="submit"
             >
               Enviar
