@@ -1,5 +1,6 @@
 import React from "react";
 import TarjeForm from "../components/TarjeForm.js";
+import url from '../config';
 
 export default class PageForm extends React.Component{
     state={
@@ -32,7 +33,7 @@ export default class PageForm extends React.Component{
                     'Content-Type': 'application/json'
                 }
             }
-            let res = await fetch('http://localhost:8000/api/info', response);
+            let res = await fetch(`${url}/info`, response); //Llamar a la función useFetch.);
             let data = await res.json();
             console.log(data);
         }
