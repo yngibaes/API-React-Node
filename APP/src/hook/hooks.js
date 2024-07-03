@@ -11,7 +11,7 @@ const useFetch = (url) => {
         }
           cargarComponentes(); //Llamar a la función cargarComponentes.
       },[url]); //Arreglo de dependencias.
-    return data;
+    return {data};
 }
 
 export default useFetch
