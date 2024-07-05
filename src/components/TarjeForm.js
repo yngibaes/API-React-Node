@@ -1,5 +1,5 @@
 import React from "react";
-import Clase from "./comClase";
+import Clase from "./card";
 import Form from "./form";
 
 const TarjeForm = ({ form, handleChange, onSubmit }) =>(  

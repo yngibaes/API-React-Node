@@ -5,14 +5,14 @@ export default class Form extends React.Component {
     const { handleChange, form = {}, onSubmit } = this.props;
     return (
       <div className="flex justify-center items-center mt-5">
-        <form className="w-1/4" onSubmit={onSubmit} method="POST">
+        <form className="w-1/4 max-md:w-4/5" onSubmit={onSubmit} method="POST">
           <div className="my-5">
-            <h1 className="text-center text-lg font-bold text-violet-800">
+            <h1 className="text-center text-lg font-bold text-[#9C8CB9]">
               Formulario
             </h1>
             <label
               htmlFor="name"
-              className="block text-sm font-medium leading-6 text-violet-900"
+              className="block text-sm font-medium leading-6 text-[#4B3F6E]"
             >
               Nombre
             </label>
@@ -28,7 +28,7 @@ export default class Form extends React.Component {
           <div className="my-5">
             <label
               htmlFor="descri"
-              className="block text-sm font-medium leading-6 text-violet-900"
+              className="block text-sm font-medium leading-6 text-[#4B3F6E]"
             >
               Descripción
             </label>
@@ -44,7 +44,7 @@ export default class Form extends React.Component {
           <div className="my-5">
             <label
               htmlFor="img"
-              className="block text-sm font-medium leading-6 text-violet-900"
+              className="block text-sm font-medium leading-6 text-[#4B3F6E]"
             >
               Imagen
             </label>
@@ -59,7 +59,7 @@ export default class Form extends React.Component {
           </div>
           <div className="flex justify-center items-center">
             <button
-              className="bg-violet-800 hover:bg-violet-600 text-white font-bold py-2 px-4 rounded"
+              className="bg-[#4B3F6E] hover:bg-[#BA96C1] text-white font-bold py-2 px-4 rounded"
               type="submit"
             >
               Enviar

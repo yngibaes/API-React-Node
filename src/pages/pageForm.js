@@ -23,7 +23,7 @@ export default class PageForm extends React.Component{
       };
     handleSubmit = async (e) => {
         e.preventDefault()
-        this.props.navigate('/gatos')
+        this.props.navigate('/card')
         try{
             let response = {
                 method: 'POST',
@@ -33,12 +33,16 @@ export default class PageForm extends React.Component{
                     'Content-Type': 'application/json'
                 }
             }
-            let res = await fetch(`${url}/info`, response); //Llamar a la función useFetch.);
+            let res = await fetch(`${url}/info`, response); //Llamar a la función useFetch.;
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
             let data = await res.json();
             console.log(data);
         }
         catch(error){
-            console.log(error)
+            console.error('Paila:', error);
+        // Handle error
         }
       };
     render(){

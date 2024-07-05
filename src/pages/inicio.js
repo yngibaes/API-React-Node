@@ -1,5 +1,6 @@
 import React from 'react'
-import Button from '../components/comButton'
+import ButtonAdd from '../components/buttonAdd'
+import ButtonCard from '../components/buttonCard'
 
 export default class Inicio extends React.Component{
   constructor(props){
@@ -15,10 +16,11 @@ export default class Inicio extends React.Component{
   render(){
     return(
       <div className='flex justify-center items-center flex-col mt-8'>
-        <h1 className='text-3xl font-bold text-violet-800'>Bienvenido al mundo de las tarjetas</h1>
+        <h1 className='text-3xl font-bold text-[#4B3F6E] p-3 text-center'>Bienvenido al mundo de las tarjetas</h1>
         <div className='flex'>
-          <button className='bg-violet-400 w-20 h-12 rounded text-large font-semibold m-2' onClick={this.handleClick}>Click</button>
-          <Button/>
+          <button className='bg-[#4B3F6E]/85 w-20 h-12 rounded text-large font-semibold m-2 text-white' onClick={this.handleClick}>Click</button>
+          <ButtonAdd/>
+          <ButtonCard/>
         </div>
       </div>
     )

@@ -1,6 +1,6 @@
 import React from "react";
-import Clase from "./comClase";
-import Button from "./comButton";
+import Clase from "../components/comClase";
+import ButtonAdd from "../components/buttonAdd";
 
 const Container = () => {
     <React.Fragment>
@@ -9,7 +9,7 @@ const Container = () => {
                   <Clase name={item.name} descri={item.descri} img={item.img}/> /* //Pasar los datos al componente Clase. */
               )
             })}
-            <Button/>
+            <ButtonAdd/>
     </React.Fragment>
 }
 

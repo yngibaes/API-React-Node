@@ -1,6 +1,27 @@
-import React from 'react'
+import React from 'react';
+import Tarjeta from '../components/card';
+import Button from '../components/buttonAdd';
+import useFetch from '../hook/hooks';
+import url from '../config';
 
-/*Componentes*/
+const PageCard = () => {
+    const data = useFetch(`${url}/info`);
+
+    return (
+      <div className='flex justify-center w-full flex-wrap'>
+          <Button/>
+          {Array.isArray(data) ? data.map((item, index) => (
+                <Tarjeta key={index} name={item.name} descri={item.descri} img={item.img}/>
+            )) : <p>Loading...</p>}
+      </div>
+    );
+}
+
+export default PageCard;
+
+/* import React from 'react'
+
+/*Componentes
 import Tarjeta from '../components/comClase'; //Importar el componente Clase.
 import Button from '../components/comButton'
 import useFetch from '../hook/hooks';
@@ -14,7 +35,7 @@ const Inicio = () => {
       <div className='flex justify-center w-full flex-wrap'>
           {data.map((item, index)=>{ //Mapear el arreglo de datos.
             return(
-                <Tarjeta key={index} name={item.name} descri={item.descri} img={item.img}/> /* //Pasar los datos al componente Clase. */
+                <Tarjeta key={index} name={item.name} descri={item.descri} img={item.img}/> /* //Pasar los datos al componente Clase.
             )
           })}
           <Button/>
@@ -22,7 +43,7 @@ const Inicio = () => {
 )
 }
 
-export default Inicio
+export default Inicio */
 /* export default class Inicio extends React.Component{
     /*Sólo con el estado se sabe que se tiene un constructor y tiene herencia lo demás, para que no haya tanto código
     state={ 

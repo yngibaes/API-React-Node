@@ -11,12 +11,12 @@ class Card extends Component {
     const theme = this.context; //Acceder al contexto.
     const className =
       theme === "dark"
-        ? "flex flex-col flex-wrap bg-violet-500 text-white h-full rounded"
-        : "flex flex-col flex-wrap bg-violet-200 text-black h-full rounded"; // Usar clases de Tailwind.
+        ? "flex flex-col flex-wrap bg-[#4B3F6E]/70 text-white h-full rounded"
+        : "flex flex-col flex-wrap bg-[#BA96C1]/85 text-white h-full rounded"; // Usar clases de Tailwind.
     return (
       <div className="flex justify-center items-center m-2">
         <div className={className}>
-          <div className="p-4 w-96 justify-center flex items-center flex-col">
+          <div className="p-4 justify-center flex items-center flex-col">
             <h1 className="text-2xl font-bold underline decoration-solid mt-3">
               Hola, {this.props.name}
             </h1>
